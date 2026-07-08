@@ -1,162 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Finanças Inteligentes</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-<header>
-
-<h1>Finanças Inteligentes</h1>
-
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="investimentos.html">Investimentos</a>
-
-<a href="rendapassiva.html">Renda Passiva</a>
-
-<a href="educacao.html">Educação Financeira</a>
-
-<a href="contatos.html">Contatos</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h2>Construa Patrimônio e Liberdade Financeira</h2>
-
-<p>
-
-Bem-vindo ao Finanças Inteligentes. Um blog criado para compartilhar conhecimento sobre investimentos, planejamento financeiro, renda passiva, mercado internacional e educação financeira.
-
-</p>
-
-</div>
-
-</section>
-
-<main>
-
-<h2 class="section-title">
-
-Conteúdos em Destaque
-
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<a href="investimentos.html">
-
-<img src="https://images.unsplash.com/photo-1559526324-593bc073d938">
-
-</a>
-
-<div class="card-content">
-
-<h3>Investimentos Modernos</h3>
-
-<p>
-
-Aprenda sobre ações, ETFs, FIIs, diversificação, dólar e oportunidades do mercado global.
-
-</p>
-
-<a href="investimentos.html" class="button">
-
-Ler Conteúdo
-
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<a href="rendapassiva.html">
-
-<img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d">
-
-</a>
-
-<div class="card-content">
-
-<h3>Renda Passiva</h3>
-
-<p>
-
-Descubra como dividendos, FIIs e juros compostos ajudam a construir independência financeira.
-
-</p>
-
-<a href="rendapassiva.html" class="button">
-
-Ler Conteúdo
-
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<a href="educacao.html">
-
-<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40">
-
-</a>
-
-<div class="card-content">
-
-<h3>Educação Financeira</h3>
-
-<p>
-
-Organização financeira, reserva de emergência, orçamento pessoal e consumo inteligente.
-
-</p>
-
-<a href="educacao.html" class="button">
-
-Ler Conteúdo
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</main>
-
-<footer>
-
-<p>
-
-© 2026 — Blog Finanças Inteligentes | Projeto Acadêmico
-
-</p>
-
-</footer>
-
+  <div class="container">
+
+    <h1 class="titulo">🌤 Previsão do Tempo</h1>
+
+    <div class="busca">
+      <input type="text" id="inputCidade" placeholder="Digite uma cidade..." />
+      <button id="btnBuscar">
+        <i class="fas fa-search"></i> Buscar
+      </button>
+    </div>
+
+    <div class="card" id="card" style="display:none">
+      <div class="cidade-info">
+        <h2 id="nomeCidade">--</h2>
+        <p id="pais">--</p>
+      </div>
+      <div class="temp-info">
+        <img id="icone" src="" alt="ícone clima" />
+        <h1 id="temperatura">--°C</h1>
+      </div>
+      <p id="descricao">--</p>
+      <div class="detalhes">
+        <div class="detalhe">
+          <i class="fas fa-droplet"></i>
+          <span id="umidade">--%</span>
+          <small>Umidade</small>
+        </div>
+        <div class="detalhe">
+          <i class="fas fa-wind"></i>
+          <span id="vento">-- km/h</span>
+          <small>Vento</small>
+        </div>
+        <div class="detalhe">
+          <i class="fas fa-temperature-half"></i>
+          <span id="sensacao">--°C</span>
+          <small>Sensação</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="erro" id="erro" style="display:none">
+      <i class="fas fa-triangle-exclamation"></i>
+      <p>Cidade não encontrada. Tente novamente.</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
